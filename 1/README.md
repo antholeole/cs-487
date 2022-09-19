@@ -4,14 +4,14 @@ To run the client:
 - `make && ./client`
 
 client accepts the following flags:
-`--ping-interval`: (int, seconds) how long to wait between beacon pings. Defaults to 60
-`--log-command-agent` ("Command Agent"): (none) enables logging for the command agent
-`--log-beacon-sender` ("Beacon Sender"): (none) enables logging for the beacon sender
-`--id` ("id"): (int) what ID to assign the current client
-`--tcp-port` ("port"): (int) what port to accept the incoming TCP connection on
-`--manager-host` ("manager host") (int int int int) what host the manager is on
-`--manager-port` ("manager port") (int) what port the manager is one
-`--self-host` ("self host") (int int int int) the host of the current agent (so we can tell the manager where to find our public IP)
+- `--ping-interval`: (int, seconds) how long to wait between beacon pings. Defaults to 60
+- `--log-command-agent` ("Command Agent"): (none) enables logging for the command agent
+- `--log-beacon-sender` ("Beacon Sender"): (none) enables logging for the beacon sender
+- `--id` ("id"): (int) what ID to assign the current client
+- `--tcp-port` ("port"): (int) what port to accept the incoming TCP connection on
+- `--manager-host` ("manager host") (int int int int) what host the manager is on
+- `--manager-port` ("manager port") (int) what port the manager is one
+- `--self-host` ("self host") (int int int int) the host of the current agent (so we can tell the manager where to find our public IP)
 
 A full run on localhost looks like the following:
 `make && ./client --ping-interval 5 --log-command-agent --log-beacon-sender --manager-host 10 90 4 211 --manager-port 9999 --self-host 10 90 4 211 --tcp-port 8888 --id 20`
