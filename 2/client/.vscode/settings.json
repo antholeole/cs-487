@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/*.o": true,
+        "client": true
+    },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": true,
+    "explorer.fileNesting.patterns": {
+        "*.c": "${capture}.h"
+    },
+    "files.associations": {
+        ".nycrc.json": "jsonc",
+        "inet.h": "c"
+    }
+}
