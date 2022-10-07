@@ -1,7 +1,7 @@
 CC       = gcc
 CFLAGS   = -Wall
 LDFLAGS  =
-OBJFILES = argparse.o main.o beacon_sender.o logger.o sender_udp.o cmd_agent.o
+OBJFILES = main.o
 TARGET   = client
 
 all: $(TARGET)

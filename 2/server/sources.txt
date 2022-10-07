@@ -1,6 +1,0 @@
-./src/com/company/agent/AgentStatus.java
-./src/com/company/agent/Agent.java
-./src/com/company/AgentCommander.java
-./src/com/company/Main.java
-./src/com/company/beacon/Beacon.java
-./src/com/company/beacon/BeaconListener.java
