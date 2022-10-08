@@ -3,7 +3,7 @@ package com.company;
 import java.nio.ByteBuffer;
 
 public class c_int extends c_type<Integer> {
-    private Integer value;
+    private Integer value = 0;
 
     @Override
     public ByteBuffer getBytes() {

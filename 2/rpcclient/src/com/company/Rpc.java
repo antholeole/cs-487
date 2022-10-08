@@ -13,7 +13,7 @@ abstract public class Rpc {
 
     // order of param matters
     abstract protected List<c_type<?>> getBody();
-    abstract protected Integer getRpcTypeCode();
+    abstract protected String getRpcTypeCode();
 
     private Integer bodySize() {
         return getBody()
@@ -35,14 +35,19 @@ abstract public class Rpc {
         bodyBuffer.order(Test.protocolByteOrder);
 
         // write RPC code
-        bodyBuffer.putInt(getRpcTypeCode());
-        bodyBuffer.position(100);
+        final String rpcCode = getRpcTypeCode();
+        for (int i = 0; i < rpcCode.length(); i++) {
+            bodyBuffer.put((byte) rpcCode.charAt(i));
+        }
+        bodyBuffer.put((byte) '\0');
+        bodyBuffer.position(rpcTypeCodeLength);
 
         // write body size
         bodyBuffer.putInt(bodySize());
 
         // write body (each of the values, enumerated)
         rpcBody.forEach((v) -> bodyBuffer.put(v.getBytes()));
+        bodyBuffer.position(0);
 
         return bodyBuffer;
     }
@@ -67,6 +72,7 @@ abstract public class Rpc {
 
         // put it into our buffer
         byteBuffer.put(bodyBytes);
+        byteBuffer.position(rpcBodySizeLength + rpcTypeCodeLength);
 
         // fill our own body
         loadFromBuffer(byteBuffer);

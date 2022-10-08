@@ -13,7 +13,7 @@ public class GetLocalTime extends Rpc {
     }
 
     @Override
-    protected Integer getRpcTypeCode() {
-        return 1;
+    protected String getRpcTypeCode() {
+        return "GetLocalTime";
     }
 }

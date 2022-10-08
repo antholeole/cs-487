@@ -6,12 +6,12 @@ public class c_char extends c_type<Character> {
     public static Character TRUE = '1';
     public static Character FALSE = '0';
 
-    private Character javaChar;
+    private Character javaChar = '\n';
 
     @Override
     public ByteBuffer getBytes() {
         final ByteBuffer byteBuffer = getSizedBuffer();
-        byteBuffer.putChar(javaChar);
+        byteBuffer.put((byte) (char) javaChar);
         return byteBuffer;
     }
 
@@ -27,12 +27,12 @@ public class c_char extends c_type<Character> {
 
     @Override
     public void setFromBytes(ByteBuffer byteBuffer) {
-        this.javaChar = byteBuffer.getChar();
+        this.javaChar = (char) byteBuffer.get();
     }
 
 
     @Override
     protected int getSize() {
-        return 2;
+        return 1;
     }
 }

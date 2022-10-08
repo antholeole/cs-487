@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rpcclient:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/rpcclient_jar</output-path>
+    <root id="archive" name="rpcclient.jar">
+      <element id="module-output" name="rpcclient" />
+    </root>
+  </artifact>
+</component>
