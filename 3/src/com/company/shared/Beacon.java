@@ -1,11 +1,13 @@
 package com.company.shared;
 
-public class Beacon {
+import java.io.Serializable;
+
+public class Beacon implements Serializable  {
     final public int ID;
     final public int StartUpTime;
     final public String CmdAgentId;
 
-    Beacon(
+    public Beacon(
             final int ID,
             final int StartUpTime,
             final String CmdAgentId

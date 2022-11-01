@@ -7,6 +7,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#undef com_company_agent_CmdAgent_beaconInterval
+#define com_company_agent_CmdAgent_beaconInterval 5L
 /*
  * Class:     com_company_agent_CmdAgent
  * Method:    C_GetLocalTime

@@ -1,10 +1,9 @@
 package com.company.manager;
 
-import com.company.shared.Beacon;
-import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-public class Manager implements Remote {
-    public int deposit(Beacon b) {
-        return -1;
-    }
+import com.company.shared.Beacon;
+
+public interface Manager extends java.rmi.Remote {
+    public int deposit(Beacon b) throws RemoteException;
 }

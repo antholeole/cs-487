@@ -1,26 +1,7 @@
 package com.company.agent;
 
-import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-import com.company.shared.cmds.GetLocalTime;
-import com.company.shared.cmds.GetLocalOs;
-
-public class CmdAgent implements Remote {
-    static {
-        System.loadLibrary("agent");
-    }
-
-    public Object execute(String CmdId, Object CmdObj) {
-        switch (CmdId) {
-            case GetLocalTime.CODE:
-                return C_GetLocalTime((GetLocalTime) CmdObj);
-            case GetLocalOs.CODE:
-                return C_GetLocalOs((GetLocalOs) CmdObj);
-            default:
-                return null;
-        }
-    }
-
-    private native GetLocalTime C_GetLocalTime(GetLocalTime getLocalTime);
-    private native GetLocalOs C_GetLocalOs(GetLocalOs getLocalOs);
+public interface CmdAgent extends java.rmi.Remote {
+    public Object execute(String CmdId, Object CmdObj) throws RemoteException;
 }
