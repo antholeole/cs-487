@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/jvm/java-11-openjdk-11.0.16.1.1-1.fc35.x86_64/include"
+                "/usr/lib/jvm/java-11-openjdk-11.0.14.1.1-5.fc35.x86_64/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

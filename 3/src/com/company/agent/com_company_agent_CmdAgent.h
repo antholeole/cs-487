@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jobject JNICALL Java_com_company_agent_CmdAgent_C_1GetLocalTime
   (JNIEnv *, jobject, jobject);
 
+/*
+ * Class:     com_company_agent_CmdAgent
+ * Method:    C_GetLocalOs
+ * Signature: (Lcom/company/shared/cmds/GetLocalOs;)Lcom/company/shared/cmds/GetLocalOs;
+ */
+JNIEXPORT jobject JNICALL Java_com_company_agent_CmdAgent_C_1GetLocalOs
+  (JNIEnv *, jobject, jobject);
+
 #ifdef __cplusplus
 }
 #endif

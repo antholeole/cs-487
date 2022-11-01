@@ -1,6 +1,8 @@
 package com.company.shared.cmds;
 
 public class GetLocalTime {
-    int valid = -1;
-    int localTime = -1;
+    public static final String CODE = "GetLocalTime";
+
+    public int valid = -1;
+    public int localTime = -1;
 }
