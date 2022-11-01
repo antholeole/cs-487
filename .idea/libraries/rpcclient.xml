@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rpcclient">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/2/rpcclient/out/artifacts/rpcclient_jar/rpcclient.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

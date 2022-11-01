@@ -1,2 +1,4 @@
-package com.company.manager;public class BeaconListenerRegister {
+package com.company.manager;
+
+public interface BeaconListenerRegister extends java.rmi.Remote {
 }
