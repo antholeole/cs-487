@@ -1,5 +1,5 @@
 # generate headers
-javac -h src/com/company/agent src/com/company/agent/CmdAgent.java
+javac -sourcepath src -h src/com/company/agent src/com/company/agent/CmdAgent.java
 
 #compile c
 gcc -c -fPIC -I /usr/lib/jvm/java-11-openjdk-11.0.16.1.1-1.fc35.x86_64/include -I /usr/lib/jvm/java-11-openjdk-11.0.16.1.1-1.fc35.x86_64/include/linux src/com/company/agent/com_company_agent_CmdAgent.c -o src/com/company/agent/com_company_agent_CmdAgent.o

@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     com_company_agent_CmdAgent
  * Method:    C_GetLocalTime
- * Signature: ()V
+ * Signature: (Lcom/company/shared/cmds/GetLocalTime;)Lcom/company/shared/cmds/GetLocalTime;
  */
-JNIEXPORT void JNICALL Java_com_company_agent_CmdAgent_C_1GetLocalTime
-  (JNIEnv *, jobject);
+JNIEXPORT jobject JNICALL Java_com_company_agent_CmdAgent_C_1GetLocalTime
+  (JNIEnv *, jobject, jobject);
 
 #ifdef __cplusplus
 }
