@@ -2,15 +2,21 @@ package com.company.agent;
 
 import java.rmi.Remote;
 
+import com.company.shared.cmds.GetLocalTime;
+
 public class CmdAgent implements Remote {
     static {
-        System.load("/Users/anthony/Projects/school/487/3/src/com/company/agent/libagent.dylib");
+        System.loadLibrary("agent");
     }
 
     public Object execute(String CmdId, Object CmdObj) {
-        C_GetLocalTime();
-        return "hi";
+        switch (CmdId) {
+            case "GetLocalTime":
+                return C_GetLocalTime((GetLocalTime) CmdObj);
+            default:
+                return null;
+        }
     }
 
-    private native void C_GetLocalTime();
+    private native GetLocalTime C_GetLocalTime(GetLocalTime getLocalTime);
 }
